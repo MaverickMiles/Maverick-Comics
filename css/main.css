@@ -8,7 +8,7 @@ html{
 }
 body{
     position:relative;
-    background-color:white;
+    background-color:black;
 }
 
 p{
@@ -78,6 +78,15 @@ header{
 }
 
 @keyframes custom-scale{
+  from {
+    width:50px; 
+    height:50px;}
+  to{
+    width:65px; 
+    height:65px;
+  }
+}
+@-webkit-keyframes custom-scale{
   from {
     width:50px; 
     height:50px;}
@@ -420,6 +429,27 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     -o-background-size: cover;
     background-size: cover;}
 }
+@-webkit-keyframes open-eye {
+    from {background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)),
+      url("bg-img/iron-man-start.jpg") 
+      no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;}
+    to {background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)),
+      url("bg-img/iron-man.jpg") 
+      no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;}
+  }
+}
 /* Art Page */
 .artsy{
     margin: 0;
@@ -433,8 +463,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     text-align:center;
     align-items:center;
     overflow:hidden;
-    -ms-overflow-style: none;
-    
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.9), 
+      rgba(0, 0, 0, 0.9)),
+      url('bg-img/joker.jpg') 
+      no-repeat center center fixed; 
+    -ms-overflow-style: none;  
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -550,26 +584,30 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     color: rgb(89, 155, 149);
   }
   .custom-projects{
-    /* background-color:rgb(160, 199, 243); */
-    position:relative;
-    width: 100vw;
-    height:150vh;
-    min-height:100vh;
-    margin:0;
-    padding:0;
-    border:0;
-    display:flex;
+    position:sticky;
+    /* top:-15vh; */
+    width: 100%;
+    height:100vh;
     background: linear-gradient(
-      rgb(2, 37, 77), 
-      rgba(0, 0, 0, 1))
+      rgba(22, 171, 216, 0.1), 
+      rgba(22, 171, 216, 0.1)),
+      url("bg-img/Black-Mirror.jpg"),
       no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
-
+    color: white;
+    align-items: center;
+    overflow-x:hidden;
+    -ms-overflow-style: none; 
+    animation-name:black-mirror-blink-eye;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-direction: both;
+    animation-fill-mode: alternate;
   }
+
   .twitter-tl{
     margin: 0;
     padding: 0;
@@ -595,3 +633,47 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     right:50vw;
   }
   
+  @keyframes black-mirror-blink-eye{
+    from {background: linear-gradient(
+      rgba(22, 171, 216, 0.1), 
+      rgba(22, 171, 216, 0.1)),
+          url("bg-img/Black-Mirror.jpg") 
+          no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          }
+    to {background: linear-gradient(
+      rgba(22, 171, 216, 0.1), 
+      rgba(22, 171, 216, 0.1)),
+        url("bg-img/Black-Mirror.jpg") 
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+  }
+  @-webkit-keyframes black-mirror-blink-eye{
+    from {background: linear-gradient(
+      rgba(22, 171, 216, 0.1), 
+      rgba(22, 171, 216, 0.1)),
+          url("bg-img/Black-Mirror.jpg") 
+          no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          }
+    to {background: linear-gradient(
+      rgba(22, 171, 216, 0.1), 
+      rgba(22, 171, 216, 0.1)),
+        url("bg-img/Black-Mirror.jpg") 
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+  }

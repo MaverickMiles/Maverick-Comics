@@ -1,5 +1,3 @@
-// var txt, name, link;
-
 $(document).ready(function(){
   setTimeout(preloader_end,1500);
   setTimeout(function(){load_component('firstName')},2200);
@@ -9,13 +7,6 @@ $(document).ready(function(){
 
 function preloader_end(){
   document.getElementsByClassName('spinner-wrapper')[0].style.display = 'none'; 
-  // fetch quote to display from json file
-  // $.getJSON("quotes.json", function(json) {
-  //   let j = Math.floor(Math.random() * json.length);
-  //   txt = '<br>' + json[j].quote + '<br><br>';
-  //   name = json[j].author;
-  //   link = json[j].link;
-  // });
 }
 
 function load_component(name){
@@ -139,11 +130,15 @@ function change_icon(){
 
 // snap effect sequence
 $("#snap-icon").click(function(){
+  $('body').css('background-color','white');
   activate_snap_elements();
   setTimeout(load_snap_scripts,1000); 
   play_snap_audio();
   setTimeout(snap,0);
   setTimeout(change_icon,5000);
+  setTimeout(function(){
+    $('body').css('background-color','black');
+  },7000);
 });
 
 

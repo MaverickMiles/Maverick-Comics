@@ -3,6 +3,9 @@ disintegrate.init()
 // data-dis-type="simultaneous" data-dis-particle-type="thanosSnap" data-dis-reduction-factor="10"
 $(function(){  
   setTimeout(snap_effect,7000);
+  setTimeout(function(){
+    $('body').css('background-color','black');
+  },2000);
 });
 
 function snap_effect(){
