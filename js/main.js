@@ -11,7 +11,7 @@ $(document).ready(function(){
 function preloader_end(){
   document.getElementsByClassName('spinner-wrapper')[0].style.display = 'none'; 
   // fetch quote to display from json file
-  $.getJSON("../data/quotes.json", function(json) {
+  $.getJSON("data/quotes.json", function(json) {
     console.log(json.length);
     let j = Math.floor(Math.random() * json.length);
     console.log(j);
@@ -111,7 +111,7 @@ function unload_snap_scripts(){
 function play_snap_audio(){
   var audio = document.createElement("audio");
   var source = document.createElement("source");
-  source.src = "../audio/snap_effect.mp3";
+  source.src = "audio/snap_effect.mp3";
   source.type= "audio/mpeg";
   audio.appendChild(source);
   document.getElementsByTagName("body")[0].appendChild(audio);
@@ -120,7 +120,7 @@ function play_snap_audio(){
 
 function snap(){
   var snap_btn = document.getElementById('snap-icon');
-  snap_btn.src="../css/icons/snapped.png";
+  snap_btn.src="css/icons/snapped.png";
   setTimeout(function(){$('#modalSnap').modal('hide');},4000);
   $("body").fadeOut(2000,function(){
     setTimeout(function(){$("body").fadeIn(3500);},3000);
@@ -131,7 +131,7 @@ function snap(){
 
 function change_icon(){
   var snap_btn = document.getElementById('snap-icon');
-  snap_btn.src="../css/icons/snap_reverse.png";
+  snap_btn.src="css/icons/snap_reverse.png";
   // setTimeout(snap,2000);  
 }
 
