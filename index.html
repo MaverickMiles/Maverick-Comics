@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' type="text/css" href='css/main.css'>
+        <link rel='stylesheet' type="text/css" href='css/phone.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Caladea@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link href="css/fontawesome/css/all.css" rel="stylesheet">
+        <link rel="icon" href="css/icons/Batman-icon.png">
+        <!-- <script defer src="js/html2canvas.js"></script>
+        <script defer src="js/disintegrate.js"></script>-->
+        <!-- <script defer src="js/snap.js"></script> -->
+        <script defer src="js/main.js"></script>
+        <script src="js/art.js"></script>
+        <link rel="preload" as="image" href="css/bg-img/iron-man.jpg" type="image/jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Will</title>
+        
+    </head>
+
+    <body data-spy="scroll" data-target="#nav-menu" data-offset="10">
+        <!-- <a href="#homepage" class="back-to-top page-scroll" style="display: inline;">Back to Top</a> -->
+
+          <!-- Preloader -->
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+        <!-- end of preloader -->
+        <header>
+            <!-- Snap Icon -->
+            <span class="navbar-brand logo-image logo-container">
+                <img src="css/icons/gauntlet.png" class='custom-scale' id='home-icon' alt="SNAP" data-toggle="modal" data-target="#modalSnap">
+            </span>
+            
+            <!-- Dropdown Menu -->
+            <button class="navbar-toggler collapsed" id="navbar-toggle" type="button">
+                <span class="navbar-toggler-awesome fas fa-bars"></span>
+                <span class="navbar-toggler-awesome fas fa-times" style="display:none;"></span>
+            </button>
+            <nav class="nav-menu navbar-items navbar" id="nav-menu">
+                        <li class="nav-item"><a href="#homepage"  class="nav-link page-scroll active">Home</a></li>
+                        <li class="nav-item"><a href="#About" class="nav-link page-scroll">About</a></li>
+                        <li class="nav-item"><a href="#jump-to-art"  class="nav-link page-scroll">Art</a></li>
+                        <li class="nav-item"><a href="#Projects" class="nav-link page-scroll">Projects</a></li>    
+            </nav>
+        </header>
+        
+        <div class="modal fade" id="modalSnap" role="dialog">
+            <div class="modal-dialog">       
+                <!-- Modal content-->
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="modal-title">
+                                <h2><br></h2>
+                                <img src="css/bg-img/thanos.jpg" id='thanos' alt="Choose your fate">
+                            </span>
+
+                            <button type="button" class="close" data-dismiss="modal" style="font-size:min(3vw,45px); position:relative;right:2vw;">&times;</button>
+                            
+                        </div>
+                        <div class="modal-body">
+                            <h1 style="font-size:min(4vw,67px); text-align:center;">Are you sure?</h1>
+                            <img src="css/icons/about_to_snap.png" class='custom-snap-scale' id='snap-icon' alt="About to SNAP">
+                    </div>
+                </div>      
+            </div>
+        </div>
+
+        <section>
+            <div class='main-page'id="homepage">
+                <!-- <div><img src="css/bg-img/Batman-minimal-eyes-closed.png" class='eye-blink'></div> -->
+
+                <div class='name custom-fade' id='firstName'>William</div>
+                <div class='name custom-fade'id= 'lastName'>Oseghare</div>
+                <div class='quote' id="quote"></div>
+                <div class='quote'><a target='_blank' id="author-name" class='custom-fade'></a></div>
+            </div>
+        </section>
+        <section>
+            <div class='bio open-eye' id="About">
+                <h1 class='bio-title' id='bioTitle' >A Short Poem</h1>
+                <div class ='bio-text-container'>
+                    <p class ='bio-text' id='test'>Who am I? I  Am  Iron  Man! *snap*</p>
+                    <!-- id='test' -->
+                    <p class ='bio-text'>Lol I haven't really figured that part out yet.</p>
+                    <p class ='bio-text'>I see myself as a unification of the identities I have imposed on myself. </p>
+                    <p class ='bio-text'>Everyday I try to understand the implications of those identities and try to aspire to the ideal version of the character I have adopted.</p>
+                    <p class ='bio-text'>I guess I live to understand what I'm living for.</p>
+                    <p class ='bio-text'>One day I will figure it out and hatch out of the egg.</p>
+                    <p class ='bio-text'>Then I will find the right words to express them, </p>
+                    <p class ='bio-text'>and they will be simple.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <section> -->
+            <div class='artsy' id='jump-to-art'>
+                    <h1 class='bio-title art-title' id="art-welcome">Welcome to my studio!</h1><br>
+                    <p class="art-text"> Here, there are no rules.<br> </p>
+                    <p class="art-text">Just keep applying those brush-strokes until something comes out of it.<br></p>
+                    <p class="art-text">The science of art is yet to be explored.<br><br><br></p>
+                        <h1 style='visibility:hidden;'> S<br> </h1>
+                <div class="slideshow-container">
+                    <div> <img src="art/stargazing-dark.jpg" class='art-image custom-fade' id="img-0"> </div>
+                    <div> <img src="art/ham.png"  class='art-image custom-fade' id="img-1"> </div>
+                    <div> <img src="art/fire of love.png" class='art-image custom-fade'id="img-4"> </div>
+                    <div> <img src="art/profile-icon.png" class='art-image custom-fade' id="img-2"> </div>
+                    <!-- <div> <img src="art/trex.png" class='art-image custom-fade'id="img-3"> </div> -->
+                    
+               </div> 
+               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+               <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+               <!-- <div><br><br><br><br><br><br><br><br><br></div> -->
+            </div>
+        <!-- </section> -->
+        <section>
+                <div class="custom-projects" id="Projects">
+                    <!-- <h1 class='bio-title'><strong><br>Coming soon...<br></strong></h1> -->
+                    <div class='project'>Connect<br> with<br> me</div>
+                    <div class='twitter-tl'>
+                    <a class="twitter-timeline" data-lang="en" data-width="500" data-height="500" data-theme="dark" href="https://twitter.com/learnMoreWill/likes?ref_src=twsrc%5Etfw">Tweets Liked by @learnMoreWill</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+        </section>
+    </body>
+</html>

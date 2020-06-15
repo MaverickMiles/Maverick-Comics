@@ -1,0 +1,75 @@
+@media screen and (max-width:768px){
+    header{
+        background-color:rgb(8, 19, 31);
+        text-transform: uppercase;
+        display:inline-block;
+        align-items:center;
+        height: auto;
+    }
+
+    #home-icon{
+      animation:none;
+      top:10%;
+    }
+
+    .nav-menu{
+        display:none;
+        text-align:center;
+    }
+    .fa-times{
+      display:none;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+
+    .navbar-toggler{
+        float:right;
+        position:relative;
+        margin-top:15px;
+        padding:5px;   
+    }
+
+
+    .main-page{
+      min-height:80vh;
+      height:80vh;
+
+    }
+
+    .name{
+      top: 20vh;
+      display:none;
+    }
+    .quote{
+      top: 30vh;
+      font-size:12.5px;
+      width:90vw;
+    }
+
+    .bio{
+        align-items:center;
+        text-align:left;
+    }
+    .bio-title{
+        /* width:100%; */
+        /* margin-left: */
+        left:0;
+        text-align:center;
+        font-size:50px;
+        top:10vh;
+    }
+    .bio-text-container{
+      /* bottom:50px; */
+      /* bottom:25%; */
+      /* left:7.5%; */
+      width:90vw;
+      font-size:15px;
+      text-align:center;
+      /* font-height: */
+    }
+
+    .custom-active{
+        display:inline-block;
+    }
+}
