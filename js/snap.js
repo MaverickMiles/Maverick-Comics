@@ -1,11 +1,9 @@
 disintegrate.init()
 
 // data-dis-type="simultaneous" data-dis-particle-type="thanosSnap" data-dis-reduction-factor="10"
-// $(function(){  
-//   setTimeout(snap,0);
-//   setTimeout(change_icon,4000);
-//   setTimeout(snap_effect,7000);
-// });
+$(function(){  
+  setTimeout(snap_effect,7000);
+});
 
 function snap_effect(){
   var items = document.getElementById('homepage').children;

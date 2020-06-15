@@ -1,24 +1,21 @@
-var txt, name, link;
-// for typewriter animation
+// var txt, name, link;
 
 $(document).ready(function(){
-  setTimeout(preloader_end,2000);
-  setTimeout(function(){load_component('firstName')},2500);
-  setTimeout(function(){load_component('lastName')},2500);
+  setTimeout(preloader_end,1500);
+  setTimeout(function(){load_component('firstName')},2200);
+  setTimeout(function(){load_component('lastName')},2200);
   setTimeout(typeWriter,4000); 
 });
 
 function preloader_end(){
   document.getElementsByClassName('spinner-wrapper')[0].style.display = 'none'; 
   // fetch quote to display from json file
-  $.getJSON("data/quotes.json", function(json) {
-    console.log(json.length);
-    let j = Math.floor(Math.random() * json.length);
-    console.log(j);
-    txt = '<br>' + json[j].quote + '<br><br>';
-    name = json[j].author;
-    link = json[j].link;
-  });
+  // $.getJSON("quotes.json", function(json) {
+  //   let j = Math.floor(Math.random() * json.length);
+  //   txt = '<br>' + json[j].quote + '<br><br>';
+  //   name = json[j].author;
+  //   link = json[j].link;
+  // });
 }
 
 function load_component(name){
@@ -30,6 +27,11 @@ function load_component(name){
 function typeWriter() {
   var i = 0;
   var speed = 50;
+  // quotes is an object from quotes.js
+  let j = Math.floor(Math.random() * quotes.length);
+  var  txt = '<br>' + quotes[j].quote + '<br><br>';
+  var  name = quotes[j].author;
+  var  link = quotes[j].link;
   function start_typing(){
     var quote = document.getElementById("quote");
     $('#author-name').attr('href', link);
@@ -84,21 +86,21 @@ function activate_snap_elements(){
 function load_snap_scripts(){
   // html2canvas.js
   var ss = document.createElement("script");
-  ss.src = "html2canvas.js";
+  ss.src = "js/html2canvas.js";
   ss.type = "text/javascript";
   ss.class = "snap_script";
   document.getElementsByTagName("head")[0].appendChild(ss);
 
   // disintegrate.js
   ss = document.createElement("script");
-  ss.src = "disintegrate.js";
+  ss.src = "js/disintegrate.js";
   ss.type = "text/javascript";
   ss.class = "snap_script";
   document.getElementsByTagName("head")[0].appendChild(ss);
 
   // snap.js
   ss = document.createElement("script");
-  ss.src = "snap.js";
+  ss.src = "js/snap.js";
   ss.type = "text/javascript";
   ss.class = "snap_script";
   document.getElementsByTagName("head")[0].appendChild(ss);
@@ -142,7 +144,6 @@ $("#snap-icon").click(function(){
   play_snap_audio();
   setTimeout(snap,0);
   setTimeout(change_icon,5000);
-  setTimeout(snap_effect,7000); 
 });
 
 
