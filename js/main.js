@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  setTimeout(preloader_end,1500);
+  setTimeout(preloader_end,2000);
   setTimeout(function(){load_component('firstName')},2200);
   setTimeout(function(){load_component('lastName')},2200);
-  setTimeout(typeWriter,4000); 
+  setTimeout(typeWriter,3500); 
 });
 
 function preloader_end(){
@@ -80,21 +80,21 @@ function load_snap_scripts(){
   ss.src = "js/html2canvas.js";
   ss.type = "text/javascript";
   ss.class = "snap_script";
-  document.getElementsByTagName("head")[0].appendChild(ss);
+  document.getElementsByTagName("body")[0].appendChild(ss);
 
   // disintegrate.js
   ss = document.createElement("script");
   ss.src = "js/disintegrate.js";
   ss.type = "text/javascript";
   ss.class = "snap_script";
-  document.getElementsByTagName("head")[0].appendChild(ss);
+  document.getElementsByTagName("body")[0].appendChild(ss);
 
   // snap.js
   ss = document.createElement("script");
   ss.src = "js/snap.js";
   ss.type = "text/javascript";
   ss.class = "snap_script";
-  document.getElementsByTagName("head")[0].appendChild(ss);
+  document.getElementsByTagName("body")[0].appendChild(ss);
 }
 
 function unload_snap_scripts(){
@@ -104,7 +104,7 @@ function unload_snap_scripts(){
 function play_snap_audio(){
   var audio = document.createElement("audio");
   var source = document.createElement("source");
-  source.src = "audio/snap_effect.mp3";
+  source.src = "audio/snap_elongated.mp3";
   source.type= "audio/mpeg";
   audio.appendChild(source);
   document.getElementsByTagName("body")[0].appendChild(audio);
@@ -114,10 +114,10 @@ function play_snap_audio(){
 function snap(){
   var snap_btn = document.getElementById('snap-icon');
   snap_btn.src="css/icons/snapped.png";
-  setTimeout(function(){$('#modalSnap').modal('hide');},4000);
-  $("body").fadeOut(2000,function(){
-    setTimeout(function(){$("body").fadeIn(3500);},3000);
-  });
+  setTimeout(function(){$('#modalSnap').modal('hide');},2000);
+  // $("body").fadeOut(2000,function(){
+  //   setTimeout(function(){$("body").fadeIn(2500);},2000);
+  // });
   // var tar = $('#About').offset().top;
   // $("html, body").animate({scrollTop: tar},1000);
 }
@@ -130,15 +130,19 @@ function change_icon(){
 
 // snap effect sequence
 $("#snap-icon").click(function(){
-  $('body').css('background-color','white');
-  activate_snap_elements();
-  setTimeout(load_snap_scripts,1000); 
+  // $('body').css('background-color','white');
+  // activate_snap_elements();
+  // setTimeout(load_snap_scripts,3000); 
+  $('.bio, .open-eye').css('animation-name','none');
   play_snap_audio();
-  setTimeout(snap,0);
-  setTimeout(change_icon,5000);
-  setTimeout(function(){
-    $('body').css('background-color','black');
-  },7000);
+  setTimeout(snap,1250);
+  setTimeout(change_icon,4000);
+  setTimeout(snap_effect,4500);
+  // $('#home-icon').disabled = true;
+  document.getElementById("home-icon").disabled = true;
+  // setTimeout(function(){
+  //   $('body').css('background-color','black');
+  // },7000);
 });
 
 

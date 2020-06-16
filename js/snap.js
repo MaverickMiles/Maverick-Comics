@@ -1,26 +1,24 @@
 disintegrate.init()
 
-// data-dis-type="simultaneous" data-dis-particle-type="thanosSnap" data-dis-reduction-factor="10"
-$(function(){  
-  setTimeout(snap_effect,7000);
-  setTimeout(function(){
-    $('body').css('background-color','black');
-  },2000);
-});
+// data-dis-type="simultaneous" data-dis-particle-type="thanosSnap" data-dis-reduction-factor="20"
+// $(function(){  
+//   setTimeout(snap_effect,4000);
+// });
 
 function snap_effect(){
   var items = document.getElementById('homepage').children;
-  for(let i = 0; i<items.length;i++){
+  for(let i = 0; i<items.length;i+=2){
     let e = items[i];
     console.log(e);
-    // e.setAttribute('data-dis-type', "simultaneous");
-    // e.setAttribute('data-dis-particle-type', "thanosSnap");
-    // e.setAttribute('data-dis-reduction-factor',"20")
     let disObj = disintegrate.getDisObj(e);
     disintegrate.createSimultaneousParticles(disObj);
     e.style.visibility="hidden";
   }
-  setTimeout(snap_header,2000);
+  setTimeout(function(){
+    var tar = $('#About').offset().top;
+    $("html, body").animate({scrollTop: tar},1000);} ,
+    3000);
+  setTimeout(snap_bio,4000);
 }
 
 function snap_header(){
@@ -31,14 +29,59 @@ function snap_header(){
     disintegrate.createSimultaneousParticles(disObj)
     e.style.visibility="hidden"
   }
-  // setTimeout(snap_bg,2000);
+  setTimeout(function(){
+    var tar = $('#jump-to-art').offset().top;
+    $("html, body").animate({scrollTop: tar},500);} ,
+    3500);
+  setTimeout(snap_art,5000);
 }
 
-function snap_bg(){
-  var e = document.getElementById("homepage");
-    
+function snap_bio(){
+  var items = document.getElementById('poem').children;
+  for(let i = 1; i<items.length;i+=2){
+    let e = items[i];
+    // console.log(e);
+    let disObj = disintegrate.getDisObj(e);
+    disintegrate.createSimultaneousParticles(disObj);
+    e.style.visibility="hidden";
+  }
+  setTimeout(function(){
+    var tar = $('#Projects').offset().top;
+    $("html, body").animate({scrollTop: tar},1000);} ,
+    4000);
+  setTimeout(snap_project,5500);
+  
+  
 }
 
+function snap_project(){
+  let e = document.getElementById('project_text');
+  let disObj = disintegrate.getDisObj(e);
+  disintegrate.createSimultaneousParticles(disObj);
+  e.style.visibility="hidden";
+  setTimeout(snap_header,4000);
+  
+}
+
+function snap_art(){
+  let e = document.getElementById('art-welcome');
+  let disObj = disintegrate.getDisObj(e);
+  disintegrate.createSimultaneousParticles(disObj);
+  e.style.visibility="hidden";
+  e = document.getElementById('art-text');
+  disObj = disintegrate.getDisObj(e);
+  disintegrate.createSimultaneousParticles(disObj);
+  e.style.visibility="hidden";
+  e = document.getElementById('art-text-2');
+  disObj = disintegrate.getDisObj(e);
+  disintegrate.createSimultaneousParticles(disObj);
+  e.style.visibility="hidden";
+  setTimeout(function(){
+    var tar = $('#jump-to-art').offset().top;
+    $("html, body").animate({scrollTop: tar},1000);} ,
+    2000);
+
+}
 const thanosSnap = function() {
   this.name = 'ThanosSnap'
   this.animationDuration = 3000

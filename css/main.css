@@ -285,10 +285,13 @@ a.back-to-top {
     text-transform: uppercase;
     color: white;
     letter-spacing:0.6em;
-    display:none;
+    /* display:none; */
     animation-name:custom-fade;
   }
-  
+
+  #lastName{
+    display:none;
+  }
 
   .quote{
     font-family: "Lucida Console", Courier, monospace;
@@ -337,6 +340,10 @@ a.back-to-top {
     overflow:hidden;
     -ms-overflow-style: none;   
     /* text-align:left; */
+    animation-name: open-eye;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main-page::-webkit-scrollbar {
