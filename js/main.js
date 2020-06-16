@@ -4,7 +4,7 @@ $(document).ready(function(){
   setTimeout(preloader_end,2000);
   setTimeout(function(){load_component('firstName')},2200);
   setTimeout(function(){load_component('lastName')},2200);
-  setTimeout(typeWriter,3500); 
+  setTimeout(typeWriter,4500); 
 });
 
 function preloader_end(){
