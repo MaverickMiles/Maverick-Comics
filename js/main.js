@@ -134,6 +134,8 @@ $("#snap-icon").click(function(){
   // activate_snap_elements();
   // setTimeout(load_snap_scripts,3000); 
   $('.bio, .open-eye').css('animation-name','none');
+  let tar = $('#homepage').offset().top;
+  $("html, body").animate({scrollTop: tar},1000);
   play_snap_audio();
   setTimeout(snap,1250);
   setTimeout(change_icon,4000);

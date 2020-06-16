@@ -472,7 +472,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     background: linear-gradient(
       rgba(0, 0, 0, 0.9), 
       rgba(0, 0, 0, 0.9)),
-      url('bg-img/joker.jpg') 
+      url('bg-img/joker.JPG') 
       no-repeat center center fixed; 
     -ms-overflow-style: none;  
     -webkit-background-size: cover;
