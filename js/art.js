@@ -12,7 +12,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var base = "linear-gradient(%, %),url('css/bg-img/joker.JPG') no-repeat center center fixed";
+  var base = "linear-gradient(%, %),url('css/bg-img/joker.jpg') no-repeat center center fixed";
   // var background = [];
   // var imgs = document.getElementsByClassName('art-image');
   // for (let i = 0;i<imgs.length;i++){
