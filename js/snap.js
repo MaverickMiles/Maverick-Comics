@@ -33,15 +33,18 @@ function snap_header(){
     var tar = $('#jump-to-art').offset().top;
     $("html, body").animate({scrollTop: tar},500);} ,
     3500);
-  setTimeout(snap_art,5000);
+  setTimeout(snap_art,4500);
 }
 
 function snap_bio(){
   var items = document.getElementById('poem').children;
+  let e = document.getElementById('bioTitle')
+  let disObj = disintegrate.getDisObj(e);
+  disintegrate.createSimultaneousParticles(disObj);
+  e.style.visibility="hidden";
   for(let i = 1; i<items.length;i+=2){
-    let e = items[i];
-    // console.log(e);
-    let disObj = disintegrate.getDisObj(e);
+    e = items[i];
+    disObj = disintegrate.getDisObj(e);
     disintegrate.createSimultaneousParticles(disObj);
     e.style.visibility="hidden";
   }
@@ -78,8 +81,7 @@ function snap_art(){
   e.style.visibility="hidden";
   setTimeout(function(){
     var tar = $('#jump-to-art').offset().top;
-    $("html, body").animate({scrollTop: tar},1000);} ,
-    2000);
+    $("html, body").animate({scrollTop: tar},1000); },2000);
 
 }
 const thanosSnap = function() {

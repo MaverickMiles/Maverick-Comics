@@ -64,7 +64,7 @@ header{
   width:65px;
   height:65px;
 }
-#snap-icon{
+#snap-icon, #unsnap-icon{
     cursor: pointer;
     position: relative;
     top:20px;

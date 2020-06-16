@@ -1,3 +1,5 @@
+var snapped = false;
+
 $(document).ready(function(){
   setTimeout(preloader_end,2000);
   setTimeout(function(){load_component('firstName')},2200);
@@ -97,8 +99,8 @@ function load_snap_scripts(){
   document.getElementsByTagName("body")[0].appendChild(ss);
 }
 
-function unload_snap_scripts(){
-  $(".snap_script").remove();
+function delete_snap_scripts(){
+  $(".snap_script, canvas").remove();
 }
 
 function play_snap_audio(){
@@ -111,6 +113,17 @@ function play_snap_audio(){
   audio.play();
 }
 
+function play_unsnap_audio(){
+  var audio = document.createElement("audio");
+  var source = document.createElement("source");
+  source.src = "audio/unsnap.mp3";
+  source.type= "audio/mpeg";
+  audio.appendChild(source);
+  document.getElementsByTagName("body")[0].appendChild(audio);
+  audio.play();
+}
+
+
 function snap(){
   var snap_btn = document.getElementById('snap-icon');
   snap_btn.src="css/icons/snapped.png";
@@ -121,10 +134,17 @@ function snap(){
   // var tar = $('#About').offset().top;
   // $("html, body").animate({scrollTop: tar},1000);
 }
+function unsnap(){
+  var snap_btn = document.getElementById('snap-icon');
+   snap_btn.src="css/icons/snap_reverse.png";
+  setTimeout(function(){$('#modalSnap').modal('hide');},1000);
+  $('[data-dis-type=simultaneous]').css("visibility","visible");
 
+}
 function change_icon(){
   var snap_btn = document.getElementById('snap-icon');
-  snap_btn.src="css/icons/snap_reverse.png";
+  snap_btn.src="css/icons/about_to_snap.png";
+  // snap_btn.id = "unsnap-icon";
   // setTimeout(snap,2000);  
 }
 
@@ -133,18 +153,41 @@ $("#snap-icon").click(function(){
   // $('body').css('background-color','white');
   // activate_snap_elements();
   // setTimeout(load_snap_scripts,3000); 
-  $('.bio, .open-eye').css('animation-name','none');
-  let tar = $('#homepage').offset().top;
-  $("html, body").animate({scrollTop: tar},1000);
-  play_snap_audio();
-  setTimeout(snap,1250);
-  setTimeout(change_icon,4000);
-  setTimeout(snap_effect,4500);
+  if (!snapped){
+    $('.bio, .open-eye').css('animation-name','none');
+    let tar = $('#homepage').offset().top;
+    $("html, body").animate({scrollTop: tar},1000);
+    play_snap_audio();
+    setTimeout(snap,1250);
+    setTimeout(change_icon,4000);
+    setTimeout(snap_effect,4500);
+    snapped = true;
+  }
+  else{
+    let tar = $('#homepage').offset().top;
+    $("html, body").animate({scrollTop: tar},1000);
+    play_unsnap_audio();
+    setTimeout(unsnap,1250);
+    // $('[data-dis-type=simultaneous]').css({visibility: visible},2000);
+    document.getElementById("home-icon").disabled = true;
+    delete_snap_scripts();
+  }
+  
   // $('#home-icon').disabled = true;
-  document.getElementById("home-icon").disabled = true;
+  // document.getElementById("home-icon").disabled = true;
   // setTimeout(function(){
   //   $('body').css('background-color','black');
   // },7000);
+});
+
+$("#unsnap-icon").click(function(){
+  console.log("Here");
+  let tar = $('#homepage').offset().top;
+  $("html, body").animate({scrollTop: tar},1000);
+  play_unsnap_audio();
+  setTimeout(unsnap,1250);
+  document.getElementById("home-icon").disabled = true;
+  delete_snap_scripts();
 });
 
 
