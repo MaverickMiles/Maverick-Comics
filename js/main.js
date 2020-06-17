@@ -1,5 +1,5 @@
 var snapped = false;
-var txt, name, link;
+var txt; var name; var link;
 $(document).ready(function(){
   setTimeout(preloader_end,2000);
   setTimeout(function(){load_component('firstName')},2200);
