@@ -1,6 +1,15 @@
 var snapped = false;
 var txt; var name; var link;
+
 $(document).ready(function(){
+  $.getJSON("data/quotes.json", function(json) {
+    //     console.log(json.length);
+        let j = Math.floor(Math.random() * json.length);
+    //     console.log(j);
+        txt = '<br>' + json[j].quote + '<br><br>';
+        name = json[j].author;
+        link = json[j].link;
+  });
   setTimeout(preloader_end,2000);
   setTimeout(function(){load_component('firstName')},2200);
   setTimeout(function(){load_component('lastName')},2200);
@@ -14,15 +23,7 @@ function preloader_end(){
 function load_component(name){
   setTimeout(function(){
     document.getElementById(name).style.display = 'block'; 
-     $.getJSON("data/quotes.json", function(json) {
-//     console.log(json.length);
-    let j = Math.floor(Math.random() * json.length);
-//     console.log(j);
-    txt = '<br>' + json[j].quote + '<br><br>';
-    name = json[j].author;
-    link = json[j].link;
-  });
-  },1000);
+  }, 1000);
 }
 
 function typeWriter() {
