@@ -558,8 +558,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     position:relative;
     /* left: 35px; */
     top:7.5vh;
-    float:left;
-    /* width: 100%; */
+    /* width: auto; */
     overflow: hidden;
     /* min-width:200px; */
     font: 20px 'Rubik', serif;
