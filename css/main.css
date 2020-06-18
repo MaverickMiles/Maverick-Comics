@@ -371,7 +371,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     padding-top:1%; 
     position:relative;
     left: 2vw;
-    top:70px;
+    top:90px;
     width: 55%;
     height:auto;
     overflow-x: hidden;
@@ -557,7 +557,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     padding:0px;
     position:relative;
     /* left: 35px; */
-    top:7.5vh;
+    top:max(12vh,90px);
     overflow: hidden;
     font: 20px 'Rubik', serif;
     line-height: 35;
