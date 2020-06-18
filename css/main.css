@@ -9,7 +9,7 @@ html{
 }
 body{
     position:relative;
-    background-color:white;
+    background-color:black;
 }
 
 p{
@@ -462,11 +462,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     margin: 0;
     padding: 0;
     position:relative;
-    background-color: rgb(0, 0, 0);
     width: 100%;
     min-height: 150vh;
     display: inline-block;
-    /* color:rgb(221, 221, 221);; */
     text-align:center;
     align-items:center;
     overflow:hidden;

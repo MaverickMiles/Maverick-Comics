@@ -1,5 +1,4 @@
 var slideIndex = 1;
-showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -39,5 +38,6 @@ function showSlides(n) {
   art.style.background = "none";
   art.style.backgroundColor = colors[parseInt(color_idx,10)];
   $('body').css('background-color', colors[parseInt(color_idx,10)]);
+
   // to replace all occurence of % in base
 }

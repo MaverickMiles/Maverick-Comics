@@ -281,8 +281,8 @@ $("#snap-icon").click(function(){
     //   setTimeout(snap_effect,8500);
     //   setTimeout(function(){snap_continue.play();},8000);
     // });
-    setTimeout(snap_effect,8500);
-    setTimeout(function(){snap_continue.play();},8000);
+    setTimeout(snap_effect,9500);
+    setTimeout(function(){snap_continue.play();},9000);
     snapped = true;
   }
 
@@ -293,7 +293,7 @@ $("#snap-icon").click(function(){
     // $('[data-dis-type=simultaneous]').css({visibility: visible},2000);
     let v = document.getElementById("home-icon");
     v.disabled = true;
-    v.style.cursor = "none";
+    v.style.cursor = "no-drop";
   }
 
   function scroll_top(){
