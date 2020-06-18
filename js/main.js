@@ -165,10 +165,7 @@ function change_icon(){
 //   setTimeout(snap_effect,4000);
 // });
 
-function snap_effect(){
-  
-  snap_continue.play();
-  
+function snap_effect(){ 
   var items = document.getElementById('homepage').children;
   for(let i = 0; i<items.length;i+=2){
     let e = items[i];
@@ -252,7 +249,7 @@ function initiate_disintegrate(){
   disintegrate.init()
   const thanosSnap = function() {
     this.name = 'ThanosSnap'
-    this.animationDuration = 3000
+    this.animationDuration = 4000
     this.size = 3
     this.speedX = Math.random()
     this.speedY = Math.random() * -1
@@ -297,6 +294,7 @@ $("#snap-icon").click(function(){
     setTimeout(snap, 3000);
     setTimeout(function(){$('#modalSnap').modal('hide');},5700);
     setTimeout(snap_effect,8500);
+    setTimeout(function(){snap_continue.play();},8000);
     snapped = true;
   }
   else{
