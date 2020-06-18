@@ -190,6 +190,7 @@ function snap_bio(){
     disintegrate.createSimultaneousParticles(disObj);
     e.style.visibility="hidden";
   }
+  $('.bio, .open-eye').css('animation-name','none');
   setTimeout(function(){
     var tar = $('#Projects').offset().top;
     $("html, body").animate({scrollTop: tar},1000);} ,
@@ -267,7 +268,6 @@ $("#snap-icon").click(function(){
   // $('body').css('background-color','white');
   // activate_snap_elements();
   // setTimeout(load_snap_scripts,3000); 
-  $('.bio, .open-eye').css('animation-name','none');
   if (!snapped){
     // load_snap_scripts();
     scroll_top();
