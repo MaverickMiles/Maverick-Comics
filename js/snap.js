@@ -1,4 +1,4 @@
-disintegrate.init()
+// disintegrate.init()
 
 // data-dis-type="simultaneous" data-dis-particle-type="thanosSnap" data-dis-reduction-factor="20"
 // $(function(){  

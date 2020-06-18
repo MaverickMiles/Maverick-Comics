@@ -8,7 +8,7 @@ html{
 }
 body{
     position:relative;
-    background-color:black;
+    background-color:white;
 }
 
 p{
@@ -559,15 +559,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main
     /* left: 35px; */
     top:7.5vh;
     float:left;
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
-    min-width:200px;
-    font:20px 'Rubik', serif;
+    /* min-width:200px; */
+    font: 20px 'Rubik', serif;
     line-height: 35;
     letter-spacing: 2px;
     color: rgb(221, 221, 221);
     line-height: 40px;
     text-align:center;
+
   }
   
   #art-welcome{
