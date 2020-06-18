@@ -5,6 +5,7 @@ html{
     -webkit-overflow-style: none;
     -moz-overflow-style: none;
     overflow-x:hidden;
+    background-color:white;
 }
 body{
     position:relative;
