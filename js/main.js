@@ -151,7 +151,7 @@ function snap_effect(){
   var items = document.getElementById('homepage').children;
   for(let i = 0; i<items.length;i+=2){
     let e = items[i];
-    console.log(e);
+    // console.log(e);
     let disObj = disintegrate.getDisObj(e);
     disintegrate.createSimultaneousParticles(disObj);
     e.style.visibility="hidden";
@@ -222,9 +222,8 @@ function snap_art(){
   disintegrate.createSimultaneousParticles(disObj);
   e.style.visibility="hidden";
   setTimeout(function(){
-    var tar = $('#jump-to-art').offset().top;
-    $("html, body").animate({scrollTop: tar},1000); },2000);
-
+    delete_snap_scripts();
+    change_icon(); },3000);
 }
 
 function initiate_disintegrate(){
@@ -292,9 +291,11 @@ $("#snap-icon").click(function(){
     play_unsnap_audio();
     setTimeout(unsnap,1000);
     // $('[data-dis-type=simultaneous]').css({visibility: visible},2000);
-    document.getElementById("home-icon").disabled = true;
-    delete_snap_scripts();
+    let v = document.getElementById("home-icon");
+    v.disabled = true;
+    v.style.cursor = "none";
   }
+
   function scroll_top(){
     let tar = $('#homepage').offset().top;
     $("html, body").animate({scrollTop: tar},1000);
