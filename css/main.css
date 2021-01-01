@@ -89,6 +89,10 @@ header {
     width: 50px;
 }
 
+.modal-content {
+    margin-top: 100px;
+}
+
 .modal-body {
     text-align: center;
     min-height: 220px;
