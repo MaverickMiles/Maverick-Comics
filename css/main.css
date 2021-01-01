@@ -1,101 +1,121 @@
-html{
-    width:100%;
-    height:100%;
+html {
+    width: 100%;
+    height: 100%;
     -ms-overflow-style: none;
     -webkit-overflow-style: none;
     -moz-overflow-style: none;
-    overflow-x:hidden;
-    background-color:white;
-}
-body{
-    position:relative;
-    background-color:black;
+    overflow-x: hidden;
+    background-color: white;
 }
 
-p{
-  margin-bottom:0;
+body {
+    position: relative;
+    background-color: black;
 }
 
-header{
+section,
+section>* {
+    width: 100%;
+    min-height: max-content;
+}
+
+@font-face {
+    font-family: 'Lucida Console';
+    src: url('./Lucida\ Console\ Regular/Lucida\ Console\ Regular.ttf');
+}
+
+p {
+    margin-bottom: 0;
+}
+
+header {
     position: fixed;
-    width:100%;
-    height:100px; /*15vh*/
+    width: 100%;
+    height: 100px;
+    /*15vh*/
     font: 22px/1.5 "Lucida Console", Courier, monospace;
     color: white;
     text-decoration: none;
     list-style-type: none;
-    flex-direction:row;
+    flex-direction: row;
     display: flex;
-    flex-direction:row;
-    align-items:center;
-    z-index:999;
+    flex-direction: row;
+    align-items: center;
+    z-index: 999;
 }
 
-.nav-menu{
-    width:100vw;
-    z-index:1;
+.nav-menu {
+    width: 100vw;
+    z-index: 1;
     /* display:block; */
 }
-.navbar-items{
+
+.navbar-items {
     display: flex;
-    flex-direction:row;
-    justify-content:flex-end;
-    position:relative;
-    flex-basis: 95vw; 
-    top:1vh;
-    right:max(1vw,20px);
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    flex-basis: 95vw;
+    top: 1vh;
+    right: max(1vw, 20px);
 }
 
-#home-icon{
-    width:50px;
-    height:50px;
-    position:relative;
-    top:-10%;
-    animation-name:custom-scale;
+#home-icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -10%;
+    animation-name: custom-scale;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-fill-mode: forwards;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.logo-container{
-  text-align:center;
-  align-items:center;
-  width:65px;
-  height:65px;
+.logo-container {
+    text-align: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
 }
-#snap-icon, #unsnap-icon{
+
+#snap-icon,
+#unsnap-icon {
     cursor: pointer;
     position: relative;
-    top:20px;
-    height:64px;
+    top: 20px;
+    height: 64px;
     width: 50px;
-    
-}
-.modal-body{
-  text-align:center;
-  min-height:220px;
 }
 
-@keyframes custom-scale{
-  from {
-    width:50px; 
-    height:50px;}
-  to{
-    width:65px; 
-    height:65px;
-  }
+.modal-body {
+    text-align: center;
+    min-height: 220px;
 }
-@-webkit-keyframes custom-scale{
-  from {
-    width:50px; 
-    height:50px;}
-  to{
-    width:65px; 
-    height:65px;
-  }
+
+@keyframes custom-scale {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+    to {
+        width: 65px;
+        height: 65px;
+    }
 }
+
+@-webkit-keyframes custom-scale {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+    to {
+        width: 65px;
+        height: 65px;
+    }
+}
+
 
 /* @keyframes custom-snap-scale{
   from {
@@ -106,577 +126,556 @@ header{
     height:5.5vw;
   }
 } */
-.modal-dialog{
-  min-width:500px;
-  min-height:260px;
+
+.modal-dialog {
+    min-width: 500px;
+    min-height: 260px;
 }
-#thanos{
-  width:450px;
-  height:270px;
-  text-align:center;
+
+#thanos {
+    width: 450px;
+    height: 270px;
+    text-align: center;
 }
+
 .navbar-toggler {
     cursor: pointer;
-    color: rgba(255,255,255,0.95);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 5vw;
     /* visibility: hidden; */
-    position:relative;
-    right:5%;
-    float:right;
-    display:none;
-  }
+    position: relative;
+    right: 5%;
+    float: right;
+    display: none;
+}
 
-li {  
-    padding:1.5% 1%;
-    margin-left:2%;
+li {
+    padding: 1.5% 1%;
+    margin-left: 2%;
 }
 
 a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 a:hover {
-  color: rgb(7, 185, 255);
+    color: rgb(7, 185, 255);
 }
 
 a.back-to-top {
-  position: fixed;
-  z-index: 999;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  display: none;
-  width: 2.625rem;
-  height: 2.625rem;
-  border-radius: 1.875rem;
-  background: #01272b url("icons/up-arrow.png") no-repeat center 47%;
-  background-size: 1.125rem 1.125rem;
-  text-indent: -9999px;
-  color: #f1f1f8;
-  text-decoration: underline;
-  cursor: pointer;
-  font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
-  text-align: left;
+    position: fixed;
+    z-index: 999;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    display: none;
+    width: 2.625rem;
+    height: 2.625rem;
+    border-radius: 1.875rem;
+    background: #01272b url("icons/up-arrow.png") no-repeat center 47%;
+    background-size: 1.125rem 1.125rem;
+    text-indent: -9999px;
+    color: #f1f1f8;
+    text-decoration: underline;
+    cursor: pointer;
+    font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+    text-align: left;
 }
 
-.active{
+.active {
     color: rgb(7, 185, 255);
     /* border-bottom:rgb(7, 185, 255) 2px solid;
     /* text-align:center; */
 }
 
 .spinner-wrapper {
-	position: fixed;
-	z-index: 999999;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background:rgb(32, 54, 56);
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(32, 54, 56);
 }
 
 .spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 3.75rem;
-  height: 1.25rem;
-  margin: -0.625rem 0 0 -1.875rem;
-  text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3.75rem;
+    height: 1.25rem;
+    margin: -0.625rem 0 0 -1.875rem;
+    text-align: center;
 }
 
-.spinner > div {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  background-color: #fff;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+.spinner>div {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
 .spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
 }
+
 .spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
 }
 
 @-webkit-keyframes sk-bouncedelay {
-	0%, 80%, 100% { -webkit-transform: scale(0); }
-	40% { -webkit-transform: scale(1.0); }
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+    }
 }
 
 @keyframes sk-bouncedelay {
-	0%, 80%, 100% {
-		-webkit-transform: scale(0);
-		-ms-transform: scale(0);
-		transform: scale(0);
-	} 40% {
-		-webkit-transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		transform: scale(1.0);
-	}
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
+    }
 }
 
-.main-page { 
-    width: 100%;;
-    min-height:110vh;
+.main-page {
+    width: 100%;
+    min-height: max(900px, 100vh);
+    height: max-content;
     color: white;
     align-items: center;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     /* flex-wrap:wrap; */
-    background: linear-gradient(
-                    rgba(0, 0, 0, 0.5), 
-                    rgba(0, 0, 0, 0.5)
-                ),
-                url("bg-img/Batman-Minimal.png"),
-                  no-repeat center center fixed; 
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/Batman-Minimal.png"), no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow-x:hidden;
-    -ms-overflow-style: none; 
-    animation-name:blink-eye;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    animation-name: blink-eye;
     animation-duration: 7.5s;
     animation-iteration-count: infinite;
     animation-direction: both;
     animation-fill-mode: alternate;
-    
     /* filter:blur(1px); */
 }
 
-@keyframes blink-eye{
-  from {background: linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)),
-        url("bg-img/Batman-Minimal-eyes-closed.png") 
-        no-repeat center center fixed;
+@keyframes blink-eye {
+    from {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/Batman-Minimal-eyes-closed.png") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        }
-  to {background: linear-gradient(
-    rgba(0, 0, 0, 0.5), 
-    rgba(0, 0, 0, 0.5)),
-      url("bg-img/Batman-Minimal.png") 
-  no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
+    }
+    to {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/Batman-Minimal.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 }
 
-.name{
-    font-family: "Lucida Console", Courier, monospace;
-    font-size:max(7.5vw, 30px);
-    font-weight:bold;
-    max-width:100%;
+.name {
+    font-family: "Lucida Console", Rubik, Courier, monospace;
+    font-size: max(7.5vw, 30px);
+    font-weight: bold;
+    max-width: 100%;
     position: relative;
     top: 15vh;
     /* margin: 1%;*/
-    padding:1%;
+    padding: 1%;
     text-align: center;
     text-transform: uppercase;
     color: white;
-    letter-spacing:0.6em;
+    letter-spacing: 0.6em;
     /* display:none; */
-    animation-name:custom-fade;
-  }
+    animation-name: custom-fade;
+}
 
-  #lastName{
-    display:none;
-  }
+#lastName {
+    display: none;
+}
 
-  .quote{
-    font-family: "Lucida Console", Courier, monospace;
-    font-size:max(1.3vmax, 20px);
-    line-height:1.25;
-    font-weight:bold;
+.quote {
+    font-family: "Lucida Console", Rubik, Courier, monospace;
+    font-size: max(1.3vmax, 20px);
+    line-height: 1.25;
+    font-weight: bold;
     position: relative;
     top: 20vh;
     padding: 1%;
     text-align: center;
-    z-index:1;
-  }
-  /* .quote::after{
+    z-index: 1;
+}
+
+
+/* .quote::after{
     content:'';
     border-right:2px solid white;
     animation: custom-fade 1s infinite ease;
   } */
-  #author-name{
-    text-shadow: 2px 2px 15px rgb(68, 131, 160);
-    display:none;
-    text-decoration:none;
-    animation-name:custom-fade;
-  }
 
-  #author-name:hover{
-    
+#author-name {
+    text-shadow: 2px 2px 15px rgb(68, 131, 160);
+    display: none;
+    text-decoration: none;
+    animation-name: custom-fade;
+}
+
+#author-name:hover {
     text-shadow: none;
     color: rgb(149, 149, 149);
-  }
+}
 
-  
-.bio{
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.55), 
-      rgba(0, 0, 0, 0.55)),
-      url('bg-img/iron-man-start.jpg') 
-      no-repeat center center fixed; 
+.bio {
+    background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('bg-img/iron-man-start.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin:0;
+    margin: 0;
     width: 100%;
-    min-height:130vh;
-    /* height:auto; */
-    overflow:hidden;
-    -ms-overflow-style: none;   
+    min-height: 100vh;
+    height: max-content;
+    /* overflow: hidden; */
+    -ms-overflow-style: none;
     /* text-align:left; */
     animation-name: open-eye;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
+    display: flex;
+    flex-direction: column;
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar, .bio::-webkit-scrollbar, .main-page::-webkit-scrollbar {
-  display: none;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.bio::-webkit-scrollbar,
+.main-page::-webkit-scrollbar {
+    display: none;
 }
 
-.bio-title{
-    position: relative;
-    left: 2vw;
-    margin-left:1.5vw;
-    top:100px;
-    padding:0;
-    border:0;
-    border:0;
-    margin-bottom: 2%;
-    /* margin-top: 0px 50px; */
-    font: bold max(5vw,80px) 'Rubik', sans-serif;
+.bio-text-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey;
+    border-radius: 2px;
+    visibility: hidden;
+}
+
+.bio-title {
+    margin-left: 3.5vw;
+    margin-top: 150px;
+    width: max-content;
+    border: 0;
+    font: bold max(4.5vw, 60px) 'Rubik', sans-serif;
     color: rgb(255, 255, 255);
     letter-spacing: 3px;
+    font-style: normal;
     /* text-align:center; */
 }
 
-.bio-text-container{
-    margin-left:2vw; 
-    padding-top:1%; 
-    position:relative;
-    left: 2vw;
-    top:90px;
-    width: 55%;
-    height:auto;
-    overflow-x: hidden;
-    min-width:200px;
-    font:max(1.8vmax,23px) 'Rubik', serif;
+.bio-text-container {
+    margin-left: 3.5vw;
+    padding-top: 1%;
+    padding-bottom: 100px;
+    top: 90px;
+    width: max(55%, 800px);
+    min-height: max-content;
+    overflow-y: hidden;
+    min-width: 200px;
+    font-family: Rubik, Courier, monospace;
+    font-size: max(1.3vmax, 24px);
+    font-style: oblique;
+    line-height: 1.25;
     /* line-height: 100; */
     letter-spacing: 2px;
     color: rgb(246, 246, 246);
     line-height: 55px;
 }
 
-  
+
 /* background animation open eye */
+
 .open-eye:hover {
-  -webkit-animation-name: open-eye;
-  -webkit-animation-duration: 1s;
-  animation-name: open-eye;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  /* animation-iteration-count: infinite; */
-  /* animation-direction: alternate; */
-  animation-fill-mode: forwards;
+    -webkit-animation-name: open-eye;
+    -webkit-animation-duration: 1s;
+    animation-name: open-eye;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
 }
+
 @-webkit-keyframes open-eye {
-  from {background: linear-gradient(
-                  rgba(0, 0, 0, 0.5), 
-                  rgba(0, 0, 0, 0.5)),
-              url("bg-img/iron-man-start.jpg") 
-              no-repeat center center fixed;
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              -o-background-size: cover;
-              background-size: cover;}
-  to {background: linear-gradient(
-                rgba(0, 0, 0, 0.5), 
-                rgba(0, 0, 0, 0.5)),
-            url("bg-img/iron-man.jpg") 
-            no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;}
+    from {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/iron-man-start.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    to {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/iron-man.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 }
 
 @keyframes open-eye {
-  from {background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)),
-    url("bg-img/iron-man-start.jpg") 
-    no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;}
-  to {background: linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)),
-    url("bg-img/iron-man.jpg") 
-    no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;}
+    from {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/iron-man-start.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    to {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/iron-man.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 }
+
 @-webkit-keyframes open-eye {
-    from {background: linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0, 0, 0, 0.5)),
-      url("bg-img/iron-man-start.jpg") 
-      no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;}
-    to {background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)),
-      url("bg-img/iron-man.jpg") 
-      no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;}
-  }
+    from {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/iron-man-start.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    to {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg-img/iron-man.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+
 /* Art Page */
-.artsy{
+
+.artsy {
     margin: 0;
     padding: 0;
-    position:relative;
     width: 100%;
-    min-height: 150vh;
-    display: inline-block;
-    text-align:center;
-    align-items:center;
-    overflow:hidden;
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.9), 
-      rgba(0, 0, 0, 0.9)),
-      url('bg-img/joker.jpg') 
-      no-repeat center center fixed; 
-    -ms-overflow-style: none;  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('bg-img/joker.jpg') no-repeat center center fixed;
+    -ms-overflow-style: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  
-  .artsy::-webkit-scrollbar {
-    display: none;
-  }
-  
-  #art-welcome{
-    position:relative;
-    /* top:25vh; */    
-    font: bold 7.5vw/1.5 "Rubik";
-    font-size:max(7.5vw, 70px);
-    text-align:center;
-  } 
+    min-height: 105vh;
+    height: max-content;
+}
 
-  .art-image{
-    position: relative;
+.artsy::-webkit-scrollbar {
     display: none;
-    width: 80%;
+}
+
+#art-welcome {
+    font: bold 7.5vw/1.5 "Rubik";
+    font-size: max(6.5vw, 70px);
+    text-align: center;
+    margin-top: 120px;
+    padding: 10px;
+}
+
+.art-image {
+    display: none;
     height: auto;
-  }
-  .slideshow-container{
-    align-items:center;
-  }
-  .prev, .next {
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+.slideshow-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+
+.photo-album {
+    width: 90vw;
+    height: 1000px;
+}
+
+.prev,
+.next {
     cursor: pointer;
-    position: absolute;
-    top: 60%;
-    min-width: 3vmax;
-    min-height: 3vmax;
-    text-align:center;
+    min-width: 70px;
+    min-height: 70px;
+    text-align: center;
     color: white;
     text-shadow: 0 0 0 white;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 40px;
     transition: 0.6s ease;
-    border-radius:  3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
     user-select: none;
     /* z-index:1; */
-  }
-  
-  .next {
-    right: 6.5%;
-  }
-  .slideshow-container img {
+}
+
+.slideshow-container div img {
     display: none;
     margin-left: auto;
     margin-right: auto;
-  }
-  .prev {  
-    left: 6.5%;
-  }
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Fading animation */
-  .custom-fade {
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Fading animation */
+
+.custom-fade {
     -webkit-animation-name: custom-fade;
     -webkit-animation-duration: 1.5s;
     animation-name: custom-fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes custom-fade {
-    from {opacity: 0}
-    to {opacity: 1}
-  }
-  
-  @keyframes custom-fade {
-    from {opacity: 0}
-    to {opacity: 1}
-  }
-  
-  .art-text{
-    margin:0px;
-    padding:0px;
-    position:relative;
+}
+
+@-webkit-keyframes custom-fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes custom-fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.art-text {
+    margin: 0px;
+    padding: 0px;
     /* left: 35px; */
-    top:max(12vh,90px);
     overflow: hidden;
     font: 20px 'Rubik', serif;
     line-height: 35;
     letter-spacing: 2px;
     color: rgb(221, 221, 221);
     line-height: 40px;
-    text-align:center;
+    text-align: center;
+}
 
-  }
-  
-  #art-welcome{
-    text-align:center;
-  }
-  
-  #img-0{
+#img-0 {
     display: block;
+    width: 100%;
     /* position:relative;
     bottom:20vh; */
-  }
-  #img-2{
-    width: 50%;
-    color: rgb(89, 155, 149);
-  }
+}
 
-  #img-3{
-    width: 50%;
-    height:50%;
-    color: rgb(89, 155, 149);
-  }
-  .custom-projects{
-    position:sticky;
-    /* top:-15vh; */
+#img-1 {
     width: 100%;
-    height:100vh;
-    background: linear-gradient(
-      rgba(22, 171, 216, 0.1), 
-      rgba(22, 171, 216, 0.1)),
-      url("bg-img/Black-Mirror.jpg"),
-      no-repeat center center fixed; 
+}
+
+#img-2 {
+    max-width: 100%;
+    max-height: 100%;
+    color: rgb(89, 155, 149);
+}
+
+#img-4 {
+    width: 100%;
+    height: 100%;
+    color: rgb(89, 155, 149);
+}
+
+.custom-projects {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( rgba(22, 171, 216, 0.1), rgba(22, 171, 216, 0.1)), url("bg-img/Black-Mirror.jpg"), no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
-    align-items: center;
-    overflow-x:hidden;
-    -ms-overflow-style: none; 
-    animation-name:black-mirror-blink-eye;
+    /* align-items: center; */
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    animation-name: black-mirror-blink-eye;
     animation-duration: 7.5s;
     animation-iteration-count: infinite;
     animation-direction: both;
     animation-fill-mode: alternate;
-  }
+    display: flex;
+    flex-direction: column;
+}
 
-  .twitter-tl{
-    margin: 0;
-    padding: 0;
-    position:relative;
-    width: 100%;
-    min-height: 100vh;
-    display: inline-block;
-    /* color:rgb(17, 15, 15); */
-    align-items:center;
-    -ms-overflow-style: none;
-    top:15vh;
-  }
-  
-  .twitter-timeline{
-    width: 100vw;
-    height: 100vh;
-    position:relative;
-    /* float:center; */
-    display: block;
-    margin-left:5vw;
-    margin-top:25vh;
-    padding:50vh;
-    right:50vw;
-  }
-  
-  @keyframes black-mirror-blink-eye{
-    from {background: linear-gradient(
-      rgba(22, 171, 216, 0.1), 
-      rgba(22, 171, 216, 0.1)),
-          url("bg-img/Black-Mirror.jpg") 
-          no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-          }
-    to {background: linear-gradient(
-      rgba(22, 171, 216, 0.1), 
-      rgba(22, 171, 216, 0.1)),
-        url("bg-img/Black-Mirror.jpg") 
-    no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+@keyframes black-mirror-blink-eye {
+    from {
+        background: linear-gradient( rgba(22, 171, 216, 0.1), rgba(22, 171, 216, 0.1)), url("bg-img/Black-Mirror.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
-  }
-  @-webkit-keyframes black-mirror-blink-eye{
-    from {background: linear-gradient(
-      rgba(22, 171, 216, 0.1), 
-      rgba(22, 171, 216, 0.1)),
-          url("bg-img/Black-Mirror.jpg") 
-          no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-          }
-    to {background: linear-gradient(
-      rgba(22, 171, 216, 0.1), 
-      rgba(22, 171, 216, 0.1)),
-        url("bg-img/Black-Mirror.jpg") 
-    no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    to {
+        background: linear-gradient( rgba(22, 171, 216, 0.1), rgba(22, 171, 216, 0.1)), url("bg-img/Black-Mirror.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
-  }
+}
+
+@-webkit-keyframes black-mirror-blink-eye {
+    from {
+        background: linear-gradient( rgba(22, 171, 216, 0.1), rgba(22, 171, 216, 0.1)), url("bg-img/Black-Mirror.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    to {
+        background: linear-gradient( rgba(22, 171, 216, 0.1), rgba(22, 171, 216, 0.1)), url("bg-img/Black-Mirror.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+#project_text {
+    margin-left: 50px;
+    margin-top: 200px;
+}
